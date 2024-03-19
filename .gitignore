@@ -1,6 +1,8 @@
-<<<<<<< HEAD
+ HEAD
+ HEAD
 node_modules
-=======
+
+>>>>>>> cc2f3687abdb5a9222661594e1c0b30737c55214
 # Logs
 logs
 *.log
@@ -131,4 +133,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+<<<<<<< HEAD
+>>>>>>> cc2f3687abdb5a9222661594e1c0b30737c55214
+=======
 >>>>>>> cc2f3687abdb5a9222661594e1c0b30737c55214
