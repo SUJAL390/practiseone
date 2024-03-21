@@ -34,11 +34,11 @@ const App = () => {
   const authinfo = [
     {
       name: "SignIn",
-      link: "/SignIn",
+      link: "/auth/SignIn",
     },
     {
       name: "SignUp",
-      link: "/SignUp",
+      link: "/auth/SignUp",
     },
   ];
 
