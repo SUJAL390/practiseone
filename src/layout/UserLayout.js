@@ -33,12 +33,12 @@ const App = () => {
 
   const authinfo = [
     {
-      name: "Login",
-      link: "/login",
+      name: "SignIn",
+      link: "/SignIn",
     },
     {
-      name: "Register",
-      link: "/register",
+      name: "SignUp",
+      link: "/SignUp",
     },
   ];
 
@@ -56,7 +56,7 @@ const App = () => {
       }}
     >
       <Layout>
-        <Header
+        <Header className="flex justify-around w-screen p-1 "
           style={{
             position: "sticky",
             top: 0,
@@ -66,26 +66,26 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <div className="header">
-            <div className='logo'>
+  
+            <div className='logo flex w-1/3 max-h-14 max-w-10 '>
               <Image src={logo} alt="Logo" />
             </div>
 
-            <div className="iteminfo">
+            <div className="flex w-1/3 justify-end gap-4">
               {iteminfo.map((item) => (
                 <div key={item.link}>
-                <button onClick={()=>handleClick(item.link)}>{item.name}</button>
+                <button className="hover:text-black" onClick={()=>handleClick(item.link)}>{item.name}</button>
               </div>
               ))}
             </div>
 
-            <div className="authinfo">
+            <div className="flex w-1/3 justify-end gap-4">
               {authinfo.map((item) => (
                 <div key={item.link}>
-                  <button onClick={()=>handleClick(item.link)}>{item.name}</button>
+                  <button className="hover:text-black"onClick={()=>handleClick(item.link)}>{item.name}</button>
                 </div>
               ))}
-            </div>
+           
           </div>
         </Header>
         <Content

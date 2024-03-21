@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import { MainRouter } from './router/MainRouter';
 
+import LoadingFallback from './skeletonPost/LoadingFallback';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Suspense fallback={'....loading'}>
+    <Suspense fallback={<LoadingFallback/>}>
     <RouterProvider router={MainRouter} />
     </Suspense>
 

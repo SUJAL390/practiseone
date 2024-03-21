@@ -1,4 +1,4 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,11 +21,11 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .iteminfo, .authinfo {
     display: flex; /* Ensure that item and auth info are displayed on smaller screens */
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items horizontally on smaller screens */
-    gap: 10px; /* Adjust the gap between items */
-  }
-}
+    /* flex-direction: column; Stack items vertically on smaller screens */
+    /* align-items: center; Center items horizontally on smaller screens */
+    /* gap: 10px; Adjust the gap between items */
+  /* }
+/* } */ 
