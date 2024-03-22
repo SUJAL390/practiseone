@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 
-const SignIn = () => {
+const SignUp = () => {
   const [information, setInformation] = useState({
     username:'',
     email: '',
@@ -32,14 +33,19 @@ const SignIn = () => {
       [name]: newValue,
     }));
   };
+ const navigate=useNavigate()
+  const handleClick=(link)=>{
+    navigate(link)
+    
+  }
 
   return (
-    <div className='text-2xl flex flex-col justify-center items-center bg-blue-400 w-screen h-screen outline-double'>
-      <div className="bg-white rounded-lg shadow-md p-4   h-5/6 ">
+    <div className='text-2xl flex flex-col justify-center items-center bg-pink-100 w-screen h-screen rounded shadow'>
+      <div className="bg-white rounded shadow p-4   h-5/6 ">
         <form onSubmit={handleSubmit}>
         <div className='p-6 text-2xl'>
             <input
-              className="border placeholder-black border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+              className="border w-full placeholder-black border-black rounded-md py-2 px-3 focus:outline-none focus:border-pink-100"
               name='username'
               type="text"
               placeholder='Enter your name'
@@ -50,7 +56,7 @@ const SignIn = () => {
           </div>
           <div className='p-6 text-2xl'>
             <input
-              className="border placeholder-black border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+              className="border placeholder-black w-full border-black rounded-md py-2 px-3 focus:outline-none focus:border-pink-100"
               name='email'
               type="email"
               placeholder='Enter your email address'
@@ -61,7 +67,7 @@ const SignIn = () => {
           </div>
           <div className='p-6 text-2xl'>
             <input
-              className="border border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400 placeholder-black"
+              className="border border-black rounded-md py-2 px-3 focus:outline-none focus:border-pink-100  placeholder-black w-full"
               type="password"
               name='password'
               placeholder='Enter your password'
@@ -72,17 +78,18 @@ const SignIn = () => {
           </div>
           <div className='p-6 text-2xl'>
           <input
-             className="border border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400 placeholder-black"
-          type="password"
-          name='confirmpassword' 
-          placeholder='confirm your password'
-        value={information.confirmpassword}
+  className="border border-black rounded-md py-2 px-4 focus:outline-none focus:border-pink-100 placeholder-black w-full h-12"
+  type="password"
+  name='confirmpassword' 
+  placeholder='Confirm your password'
+  value={information.confirmpassword}
   onChange={handleChange}
   required // Input is required
 />
 
+
           </div>
-          <div className='p-6 text-2xl'>
+          <div className='p-4 pl-6  text-2xl'>
             <label htmlFor="rememberMe" className="mr-2">Remember me</label>
             <input
               type="checkbox"
@@ -92,11 +99,16 @@ const SignIn = () => {
               onChange={handleChange}
             />
           </div>
-          <button className='p-6 text-2xl text-black hover:text-blue-600' type="submit">SIGN IN</button>
-        </form>
+          <div className='h-auto flex justify-around gap-20'>
+          <button className='pt-3 px-3 text-2xl pb-1 text-black hover:text-blue-600' type="submit">Next</button>
+          
+          <button className="rounded text-black "onClick={()=>handleClick("/")} > Back to Home</button>
+          </div>
+          <div ><button mt-3 onClick={()=>handleClick("/auth/signin")}  className=' text-xs  text-black hover:text-blue-600' type="submit">Already have an account?Sign IN</button></div>
+          </form>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default SignUp;

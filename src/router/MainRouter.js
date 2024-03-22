@@ -13,6 +13,7 @@ const About = lazy(() => import('../component/user/About'));
 const Contact = lazy(() => import('../component/user/Contact'));
 const SignUp = lazy(() => import('../component/auth/SignUp'));
 const SignIn= lazy(() => import('../component/auth/SignIn'));
+const Forget=lazy(()=>import('../component/auth/Forget'))
 
 
 
@@ -32,6 +33,7 @@ export const MainRouter = createBrowserRouter(
       <Route path="/Auth" element={<AuthLayout />}>
         <Route path="SignIn" element ={<SignIn />} />
         <Route path="SignUp" element ={<SignUp />} />
+        <Route path="Forget" element={<Forget/>}/>
       </Route>
     
 
