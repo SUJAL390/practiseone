@@ -1,6 +1,8 @@
 import React, { lazy } from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 
+
+
 // Lazy load components
 const AdminDashboard = lazy(() => import('../component/admin/AdminDashboard'));
 const PageNotFound = lazy(() => import('../component/PageNotFound'));
@@ -13,8 +15,10 @@ const About = lazy(() => import('../component/user/About'));
 const Contact = lazy(() => import('../component/user/Contact'));
 const SignUp = lazy(() => import('../component/auth/SignUp'));
 const SignIn= lazy(() => import('../component/auth/SignIn'));
-const Forget=lazy(()=>import('../component/auth/Forget'))
 
+const Dashboard=lazy(()=>import('../component/user/dashboard/Dashboard'))
+const Cart=lazy(()=>import('../component/user/Cart'))
+const Details=lazy(()=>import('../component/user/Details'))
 
 
 
@@ -26,17 +30,21 @@ export const MainRouter = createBrowserRouter(
       <Route path="/" element={<UserLayout />}>
         <Route index element={<Information />} />
         <Route path="" element={<Home/>} />
+        <Route path="Details" element={<Details/>} />
+        <Route path='Dashboard' element={<Dashboard/>}/>
+        <Route path="Cart" element={<Cart/>} />
       <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
+    
+   
       </Route>
 
       <Route path="/Auth" element={<AuthLayout />}>
         <Route path="SignIn" element ={<SignIn />} />
         <Route path="SignUp" element ={<SignUp />} />
-        <Route path="Forget" element={<Forget/>}/>
+       
       </Route>
     
-
+      <Route path="/contact" element={<Contact />} />
 
       {/* Routes for admin */}
       <Route path="/admin" element={<AdminLayout />}>

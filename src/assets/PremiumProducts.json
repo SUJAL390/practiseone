@@ -1,0 +1,70 @@
+[
+    {
+      "id": 1,
+      "category": "women",
+      "name": "VALOUR BLUE",
+      "company": "Nike",
+      "rate": 75,
+      "price": 72,
+      "oldPrice": 0,
+      "discount": false,
+      "description": "The Air Jordan 3 Valor Blue combines style and performance for basketball enthusiasts and with superb technology.",
+      "images": [
+        "https://secure-images.nike.com/is/image/DotCom/CT8532_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CT8532_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CT8532_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CT8532_104_A_PREM?$SNKRS_COVER_WD$&align=0,1"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "men",
+      "name": "JORDAN MARS",
+      "company": "Adidas",
+      "rate": 25,
+      "price": 100,
+      "oldPrice": 120,
+      "discount": true,
+      "description": "Inspired by London's urban landscape, the Jordan Mars 270 combines street style with modern comfort.",
+      "images": [
+        "https://secure-images.nike.com/is/image/DotCom/CV3042_001_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CV3042_001_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CV3042_001_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CV3042_001_A_PREM?$SNKRS_COVER_WD$&align=0,1"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "women",
+      "name": "RACER BLUE",
+      "company": "Nike",
+      "rate": 45,
+      "price": 120,
+      "oldPrice": 0,
+      "discount": false,
+      "description": "The Air Jordan 1 Zoom Racer Blue brings comfort and style to the streets with Zoom Air cushioning and good technology.",
+      "images": [
+        "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1",
+        "https://secure-images.nike.com/is/image/DotCom/CK6637_104_A_PREM?$SNKRS_COVER_WD$&align=0,1"
+      ]
+    },
+    
+    {
+      "id": 6,
+      "category": "men",
+      "name": "NIKE",
+      "company": "Adidas",
+      "rate": 46,
+      "price": 30,
+      "oldPrice": 0,
+      "discount": false,
+      "description": "The Nike React Miler ensures a comfortable and stable running experience with React foam technology.",
+      "images": [
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg",
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg"
+      ]
+    }]

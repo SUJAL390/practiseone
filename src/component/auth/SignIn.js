@@ -25,6 +25,7 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted:', formData);
+    alert('thank you forsubmitting')
 
     // Clear form data
     setFormData({
@@ -56,61 +57,53 @@ const SignIn = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-400 to-blue-600">
-      <div className="w-full max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="px-6 py-8">
-          <h2 className="text-3xl font-extrabold text-center text-gray-900 mb-6">Sign In</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name='email'
-                type="email"
-                placeholder='Enter your email address'
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <input
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="password"
-                name='password'
-                placeholder='Enter your password'
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  name="rememberMe"
-                  checked={formData.rememberMe}
-                  onChange={handleChange}
-                  className="mr-2 leading-tight"
-                />
-                <span className="text-sm text-gray-700">Remember me</span>
-              </label>
-            </div>
-            <div className="flex items-center justify-between">
-              <button type="button" onClick={handleForgotPassword} className="text-sm text-blue-500 hover:text-blue-700">Forgot password?</button>
-              <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign In</button>
-            </div>
-          </form>
-          <div className="mt-6 text-center">
-            <button onClick={() => handleClick("/auth/signup")} className="text-sm text-blue-500 hover:text-blue-700 mr-2">New user? Sign Up</button>
-            <button onClick={() => handleClick("/")} className="text-sm text-blue-500 hover:text-blue-700">Back to Home</button>
+    <div className='text-2xl flex flex-col justify-center items-center gap-10 bg-gradient-to-r from-purple-500 to-pink-500  w-screen h-screen outline-double'>
+      <div className="bg-white rounded-lg shadow-md p-8">
+        <form onSubmit={handleSubmit}>
+          <div className='p-10 text-2xl'>
+            <input
+              className="border w-5/6 placeholder-black border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+              name='email'
+              type="email"
+              placeholder='Enter your email address'
+              value={formData.email}
+              onChange={handleChange}
+              required // Input is required
+            />
           </div>
-        </div>
+          <div className='p-10'>
+            <input
+              className="border w-5/6 border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400 placeholder-black"
+              type="password"
+              name='password'
+              placeholder='Enter your password'
+              value={formData.password}
+              onChange={handleChange}
+              required // Input is required
+            />
+          </div>
+          <div className="px-8 gap-2">
+            <label htmlFor="rememberMe" className="mr-2">Remember me</label>
+            <input
+              type="checkbox"
+              id="rememberMe"
+              name="rememberMe"
+              checked={formData.rememberMe}
+              onChange={handleChange}
+            />
+          </div>
+          <div className='p-10'>
+            <button onClick={handleForgotPassword} className='p-10 text-2xl text-black hover:text-blue-600' type="button">Forgot password?</button>
+          </div>
+          <button onClick={() => handleClick("/auth/signup")} className='p-10 text-2xl text-black hover:text-blue-600' type="button">New user ? SIGN up</button>
+          <button onClick={() => handleClick("/")} className='p-10 text-2xl text-black hover:text-blue-600' type="button">Back to Home</button>
+        </form>
       </div>
 
       {/* Forgot Password Modal */}
       {formData.showForgotPasswordModal && (
-        <div className="fixed z-10 inset-0 overflow-y-auto flex justify-center items-center bg-gray-800 bg-opacity-75">
-          <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="fixed z-10 inset-0 overflow-y-auto flex justify-center items-center">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500  rounded-lg shadow-md p-8">
             <h2 className="text-xl font-bold mb-4">Forgot Password</h2>
             {formData.newPassword && formData.confirmNewPassword && formData.newPassword !== formData.confirmNewPassword && (
               <p className="text-red-500 mb-4">Passwords do not match</p>
@@ -119,7 +112,7 @@ const SignIn = () => {
             <form>
               <input
                 type="password"
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-4 leading-tight focus:outline-none focus:shadow-outline"
+                className="border w-full border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400 placeholder-black mb-4"
                 placeholder="Enter new password"
                 name="newPassword"
                 value={formData.newPassword}
@@ -128,7 +121,7 @@ const SignIn = () => {
               />
               <input
                 type="password"
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-4 leading-tight focus:outline-none focus:shadow-outline"
+                className="border w-full border-black rounded-md py-2 px-3 focus:outline-none focus:border-blue-400 placeholder-black mb-4"
                 placeholder="Confirm new password"
                 name="confirmNewPassword"
                 value={formData.confirmNewPassword}
